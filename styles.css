@@ -25,20 +25,26 @@
 .page-container {
 	display: flex;
 	flex-direction: column;
-	max-height: 100vh;
 	overflow: hidden;
+	margin-bottom: 50px;
+	padding-top: 80px;
 }
 /* Start Nav Bar */
 nav {
+	position: fixed;
+	top: 5px;
+	left: 0;
+	right: 0;
+	z-index: 1000;
 	background-color: rgba(255, 255, 255, 0.2);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	border-radius: 25px;
-	padding: 5px 20px; 
-
+	padding: 5px 20px;
+	transition: background-color 0.3s, padding 0.3s;
 }
-    
+   
 nav .logo {
 	display: flex;
 	align-items: center;
@@ -90,6 +96,41 @@ nav ul li a {
 	cursor: pointer;
 	font-size: 24px;
 }
+
+	/* Collapsed Nav Bar */
+nav.collapsed {
+	background-color: rgba(255, 255, 255, 0.6); 
+	padding: 5px 10px; 		
+}
+	
+nav.collapsed .logo .header_title {
+	color: #7f8e6f; 
+}
+	
+nav.collapsed .hamburger{
+	color: #7f8e6f; 
+}
+	
+nav.collapsed a{
+	color: #7f8e6f; 
+}
+nav.collapsed ul li {
+	color: #7f8e6f;
+	padding: 10px 10px;
+}
+    
+nav.collapsed ul li:hover,
+nav.collapsed ul li.active {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 25px;
+}
+    
+nav.collapsed ul li a {
+	color: #7f8e6f;
+	text-decoration: none;
+}
+
+	/* End collapsed nav bar */
 /* End Nav Bar */
 
 .galerie {
@@ -100,14 +141,16 @@ nav ul li a {
 }
 /* Start Contact */
 .grid-container {
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	gap: 20px;
+	column-gap: 20px;
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	
+	/* margin-top: 100px; */
+	margin-bottom: 20px;
 }
     
 .grid-item {
@@ -120,65 +163,6 @@ nav ul li a {
 	font-size: 12px;
 }
 
-.container {
-	display: flex;
-	border-radius: 5px;
-	background-color: rgba(255, 255, 255, 0.2);
-	padding: 20px;
-	margin: 10px 0px;
-}
-     
-.container form {
-	flex: 1;
-}
-
- 
-input[type=text], select, textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	height: 50px;
-}
-     
-input[type=submit] {
-	background-color: #808f6f;
-	color: #FFFFFF;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-}
-     
-input[type=submit]:hover {
-	background-color: #45a049;
-	color: #FFFFFF;
-}
-     
-input[type=reset] {
-	background-color: #8b8f8b;
-	color: #FFFFFF;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-}
-     
-input[type=reset]:hover {
-	background-color: #5a5858
-}
-
-/* End Contact */
-
-
-
-
-
-
-
-
-/* Start Contact */
 .container {
 	display: flex;
 	border-radius: 25px;
@@ -201,7 +185,7 @@ label {
 	color: #FFFFFF;
 	font-size: 13px;
 }
-     
+
 input[type=text], select, textarea, input[type=email], input[type=tel] {
 	width: 100%;
 	padding: 12px;
@@ -229,7 +213,7 @@ input[type=submit]:hover {
 input[type=reset] {
 	background-color: #8b8f8b;
 	color: #FFFFFF;
-	padding: 10px 15px;
+	padding: 12px 20px;
 	border: none;
 	border-radius: 10px;
 }
@@ -237,26 +221,40 @@ input[type=reset] {
 input[type=reset]:hover {
 	background-color: #5a5858
 }
-     
+
 .container .map {
-	padding: 12px;
+	padding: 5px;
 	margin-left: 20px;
 	flex: 1;
+	max-width: 100%;
+	overflow: auto;
 }
-
+    
 .map iframe {
 	width: 100%;
 	height: 100%;
 	border: none;
 	border-radius: 10px;
-	
 }
+    
+.grid-item.map {
+	grid-column: span 2;
+}
+
+.grid-item.hours{
+	text-align: center;
+}
+
+.grid-item.hours p {
+	font-size: 15px;
+	margin: 28px 5px;
+      }
 
 textarea, option {
 	font-family: 'Lora', sans-serif;
 	font-size: 12px;
 }
-     
+
 /* End Contact */
 
 
@@ -265,21 +263,20 @@ textarea, option {
 .footer {
 	position: fixed;
 	display: flex;
+	justify-content: center;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #FFFFFF;
-	text-align: center;
-	padding: 12px;
-	font-size: 10px;
+	padding: 7px;
 }
 
 .social-buttons {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: 5px;
+	gap: 10px;
 }
 
 .social-button {
@@ -384,7 +381,7 @@ button.back-to-top-button {
 	    background-color: rgba(127, 142, 111, 0.8);
 	    border-radius: 25px;
 	    position: absolute;
-	    top: 80px;
+	    top: 60px;
 	    left: 10px;
 	    right: 10px;
 	    text-align: center;
@@ -402,21 +399,67 @@ button.back-to-top-button {
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 25px;
 	}
+
+	/* Collapsing nav bar */
+	.hamburger.collapsed {
+		display: block;
+		cursor: pointer;
+		font-size: 24px;
+		padding: 15px 20px;
+		color: #ffffff;
+	}
+    
+	nav.collapsed ul {
+	    display: none;
+	    flex-direction: column;
+	    background-color: rgba(255, 255, 255, 0.6);
+	    border-radius: 25px;
+	    position: absolute;
+	    top: 60px;
+	    left: 10px;
+	    right: 10px;
+	    text-align: center;
+	    padding: 5px 20px;
+	}
+    
+	nav.collapsed ul li {
+	    margin: 0;
+	    width: 100%;
+	    padding: 10px 0;
+	}
+
+	nav.collapsed ul li:hover,
+	nav.collapsed ul li.active {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 25px;
+	}
+
+	/* End collapsing nav bar */
     
 	#menu-toggle:checked + .hamburger + ul {
 		display: flex;
 		align-items: center;
 	}
+	.grid-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto; /* Adjust based on your needs */
+		column-gap: 0;
+	}
+	
+	.grid-item.map {
+		grid-column: span 1;
+	}
+	
 	.container {
 		display: block;
 		padding: 12px;
 		margin: 10px;
-		flex: 1;
 	}
-	.grid-container {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, 1fr);
-	    }
 	
+	.container .map {
+		margin-left: 0;
+		overflow: auto; 
+	}
 }
+
     
