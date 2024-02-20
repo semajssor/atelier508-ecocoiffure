@@ -95,9 +95,10 @@
 					required />
 
 				<label for="contactMethod"
-					>Méthode de contact :</label
+					>Méthode de contact : *</label
 				>
 				<select
+					required
 					id="contactMethod"
 					onchange="toggleInput()">
 					<option
@@ -139,9 +140,10 @@
 				</div>
 
 				<label for="message"
-					>Message</label
+					>Message : *</label
 				>
 				<textarea
+					required
 					name="message"
 					id="message"
 					placeholder="Votre message ..."></textarea>
