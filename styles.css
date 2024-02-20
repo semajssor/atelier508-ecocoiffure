@@ -11,6 +11,16 @@
 	max-width: 1280px;
 	background-color: #808f6f;
 	margin: 0 auto;
+	--social-button-size: 30px;
+  --social-button-icon-size: 0.5;
+  --social-button-background: #fff;
+  --social-button-active-color: #fff;
+  --social-button-transition-time: 0.3s;
+  --social-button-color-mail: #0072c6;
+  --social-button-color-facebook: #3b5999;
+  --social-button-color-linkedin: #0077b5;
+  --social-button-color-instagram: #e4405f;
+
 }
 
 /* Start Nav Bar */
@@ -21,6 +31,7 @@ nav {
 	justify-content: space-between;
 	border-radius: 25px;
 	padding: 5px 20px; 
+
 }
     
 nav .logo {
@@ -77,6 +88,27 @@ nav ul li a {
 /* End Nav Bar */
 
 /* Start Contact */
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+    }
+    
+    .grid-item {
+	box-sizing: border-box;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 20px;
+	margin: 10px 0px;
+	color:#ffffff;
+	font-size: 12px;
+}
+
 .container {
 	display: flex;
 	border-radius: 5px;
@@ -88,7 +120,8 @@ nav ul li a {
 .container form {
 	flex: 1;
 }
-     
+
+ 
 input[type=text], select, textarea {
 	width: 100%;
 	padding: 12px;
@@ -234,6 +267,84 @@ textarea, option {
 	padding: 12px;
 	font-size: 10px;
 }
+
+.social-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 5px;
+}
+
+.social-button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	width: var(--social-button-size);
+	height: var(--social-button-size);
+	text-decoration: none;
+	border-radius: 100%;
+	background: var(--social-button-background);
+	text-align: center;
+}
+      
+.social-button::after {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 50%;
+	display: block;
+	width: 0;
+	height: 0;
+	border-radius: 100%;
+	transition: var(--social-button-transition-time);
+}
+      
+.social-button:focus,
+.social-button:hover {
+	color: var(--social-button-active-color);
+}
+      
+.social-button:focus::after,
+.social-button:hover::after {
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	margin-left: calc(-50% - 1px);
+}
+      
+.social-button i,
+.social-button svg {
+	position: relative;
+	z-index: 1;
+	transition: var(--social-button-transition-time);
+}
+      
+.social-button i {
+	font-size: calc(var(--social-button-size) * var(--social-button-icon-size));
+}
+      
+.social-button svg {
+	height: percentage(var(--social-button-icon-size));
+	width: percentage(var(--social-button-icon-size));
+}
+      
+      /* Social Button Colors */
+.social-button--facebook {
+	color: var(--social-button-color-facebook);
+}
+      
+.social-button--facebook::after {
+	background: var(--social-button-color-facebook);
+}
+      
+.social-button--instagram {
+	color: var(--social-button-color-instagram);
+}
+      
+.social-button--instagram::after {
+	background: var(--social-button-color-instagram);
+}
 /* End footer */
 
 /* Media query for tablet and phone screens */
@@ -281,7 +392,10 @@ textarea, option {
 		margin: 10px;
 		flex: 1;
 	}
-
+	.grid-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, 1fr);
+	    }
 	
 }
     
