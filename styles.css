@@ -22,7 +22,12 @@
   	--social-button-color-instagram: #e4405f;
 
 }
-
+.page-container {
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+	overflow: hidden;
+}
 /* Start Nav Bar */
 nav {
 	background-color: rgba(255, 255, 255, 0.2);
@@ -163,12 +168,7 @@ input[type=reset] {
 input[type=reset]:hover {
 	background-color: #5a5858
 }
-     
-.container .map {
-	padding: 12px;
-	margin-left: 20px;
-	flex: 1;
-}
+
 /* End Contact */
 
 
@@ -195,13 +195,6 @@ input[type=reset]:hover {
 
 .hidden{
 	display: none;
-
-}
-
-div.grid-item.hours {
-	display: block;
-	padding: 20px;
-	margin: 0px 0px;
 }
 
 label {
