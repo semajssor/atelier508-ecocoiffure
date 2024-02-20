@@ -200,9 +200,10 @@ input[type=reset]:hover {
 
 div.grid-item.hours {
 	display: block;
-	margin-bottom: auto;
-	margin-top: auto;
+	padding: 20px;
+	margin: 0px 0px;
 }
+
 label {
 	color: #FFFFFF;
 	font-size: 13px;
@@ -270,7 +271,7 @@ textarea, option {
 /* Start footer */
 .footer {
 	position: relative;
-		display: flex;
+	display: flex;
 	left: 0;
 	right: 0;
 	bottom: 0;
