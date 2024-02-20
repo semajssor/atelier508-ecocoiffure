@@ -180,6 +180,7 @@ input[type=reset]:hover {
 	padding: 20px;
 	margin: 10px 0px;
 	flex-wrap: wrap;
+	color: #FFFFFF;
 }
      
 .container form {
