@@ -5,9 +5,7 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>
-			Atelier 508 | CONTACT
-		</title>
+		<title>Atelier 508 | CONTACT</title>
 
 		<!-- Start Text Font -->
 		<link
@@ -57,17 +55,17 @@
 							>
 						</li>
 						<li>
-							<a href="/apropos.html"
+							<a href="/src/apropos.html"
 								>À propos</a
 							>
 						</li>
 						<li>
-							<a href="/gallerie.html"
+							<a href="/src/gallerie.html"
 								>Gallerie</a
 							>
 						</li>
 						<li class="active">
-							<a href="/contact.html"
+							<a href="/src/contact.html"
 								>Contact</a
 							>
 						</li>
@@ -75,8 +73,6 @@
 				</nav>
 			</div>
 		</div>
-
-		
 
 		<div class="container">
 			<form action="">
@@ -98,23 +94,49 @@
 					id="lname"
 					required />
 
-                    <label for="contactMethod">Méthode de contact :</label>
-                    <select id="contactMethod" onchange="toggleInput()">
-                         <option value="" disabled selected>Choisir</option>
-                         <option value="email">Courriel</option>
-                         <option value="phone">Téléphone</option>
-                    </select>
-                     
-                    <div id="emailInput" class="hidden">
-                         <label for="email">Courriel :</label>
-                         <input type="email" id="email" name="email">
-                    </div>
-                     
-                    <div id="phoneInput" class="hidden">
-                         <label for="phone">Téléphone :</label>
-                         <input type="tel" id="phone" name="phone">
-                    </div>
+				<label for="contactMethod"
+					>Méthode de contact :</label
+				>
+				<select
+					id="contactMethod"
+					onchange="toggleInput()">
+					<option
+						value=""
+						disabled
+						selected>
+						Choisir
+					</option>
+					<option value="email">
+						Courriel
+					</option>
+					<option value="phone">
+						Téléphone
+					</option>
+				</select>
 
+				<div
+					id="emailInput"
+					class="hidden">
+					<label for="email"
+						>Courriel :</label
+					>
+					<input
+						type="email"
+						id="email"
+						name="email" />
+				</div>
+
+				<div
+					id="phoneInput"
+					class="hidden">
+					<label for="phone"
+						>Téléphone :</label
+					>
+					<input
+						type="tel"
+						id="phone"
+						name="phone" />
+				</div>
 
 				<label for="message"
 					>Message</label
@@ -133,9 +155,16 @@
 			</form>
 
 			<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11178.063501411727!2d-73.5487609!3d45.539947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91b9197924e45%3A0x7657be7961206831!2sAtelier%20508%20%C3%89co-Coiffure!5e0!3m2!1sen!2str!4v1708409677472!5m2!1sen!2str" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11178.063501411727!2d-73.5487609!3d45.539947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91b9197924e45%3A0x7657be7961206831!2sAtelier%20508%20%C3%89co-Coiffure!5e0!3m2!1sen!2str!4v1708409677472!5m2!1sen!2str"
+					width="400"
+					height="300"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
-          <script src="index.js"></script>
+		<script src="index.js"></script>
 	</body>
 </html>

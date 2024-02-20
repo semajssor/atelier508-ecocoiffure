@@ -249,7 +249,7 @@ textarea, option {
 	nav ul {
 	    display: none;
 	    flex-direction: column;
-	    background-color: rgba(255, 255, 255, 0.2);
+	    background-color: rgba(127, 142, 111, 0.8);
 	    border-radius: 25px;
 	    position: absolute;
 	    top: 80px;
@@ -263,6 +263,12 @@ textarea, option {
 	    margin: 0;
 	    width: 100%;
 	    padding: 10px 0;
+	}
+
+	nav ul li:hover,
+	nav ul li.active {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
 	}
     
 	#menu-toggle:checked + .hamburger + ul {
