@@ -87,6 +87,12 @@ nav ul li a {
 }
 /* End Nav Bar */
 
+.galerie {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	background-color: rgba(255, 255, 255, 0.2);
+}
 /* Start Contact */
 .grid-container {
 	display: grid;
@@ -192,6 +198,11 @@ input[type=reset]:hover {
 
 }
 
+div.grid-item.hours {
+	display: block;
+	margin-bottom: auto;
+	margin-top: auto;
+}
 label {
 	color: #FFFFFF;
 	font-size: 13px;
@@ -258,11 +269,12 @@ textarea, option {
 
 /* Start footer */
 .footer {
-	position: fixed;
+	position: relative;
+		display: flex;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(128, 143, 111, 0.5);
+	background-color: rgba(255, 255, 255, 0.2);
 	color: #FFFFFF;
 	text-align: center;
 	padding: 12px;
