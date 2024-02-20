@@ -346,6 +346,20 @@ textarea, option {
 .social-button--instagram::after {
 	background: var(--social-button-color-instagram);
 }
+
+button.back-to-top-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+	border: none;
+	border-radius: 50%;
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+	display: none;
+}
 /* End footer */
 
 /* Media query for tablet and phone screens */
