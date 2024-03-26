@@ -74,11 +74,14 @@ nav ul {
 nav ul li {
 	color: #FFFFFF;
 	padding: 10px 10px;
+	margin: 0 5px;
+	border: 1px solid transparent;
 }
     
 nav ul li:hover,
 nav ul li.active {
-	background-color: rgba(128, 143, 111, 0.5);
+	background-color: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.6);
 	border-radius: 25px;
 }
     
@@ -99,7 +102,7 @@ nav ul li a {
 
 	/* Collapsed Nav Bar */
 nav.collapsed {
-	background-color: rgba(255, 255, 255, 0.6); 
+	background-color: rgba(255, 255, 255, 0.9);
 	padding: 5px 10px; 		
 }
 	
@@ -117,11 +120,13 @@ nav.collapsed a{
 nav.collapsed ul li {
 	color: #7f8e6f;
 	padding: 10px 10px;
+	border: 1px solid transparent;
 }
     
 nav.collapsed ul li:hover,
 nav.collapsed ul li.active {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.7);
+	border-color: rgba(127, 142, 111, 0.93);
 	border-radius: 25px;
 }
     
@@ -374,30 +379,34 @@ button.back-to-top-button {
 		padding: 15px 20px;
 		color: #ffffff;
 	}
-    
+
 	nav ul {
-	    display: none;
-	    flex-direction: column;
-	    background-color: rgba(127, 142, 111, 0.8);
-	    border-radius: 25px;
-	    position: absolute;
-	    top: 60px;
-	    left: 10px;
-	    right: 10px;
-	    text-align: center;
-	    padding: 5px 20px;
+		display: none;
+		flex-direction: column;
+		background-color: rgba(127, 142, 111, 0.93);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		border-radius: 25px;
+		position: absolute;
+		top: 70px;
+		left: 10px;
+		right: 10px;
+		text-align: center;
+		padding: 5px 20px;
 	}
-    
+
 	nav ul li {
-	    margin: 0;
-	    width: 100%;
-	    padding: 10px 0;
+		width: 100%;
+		padding: 10px 0;
+		margin-bottom: 5px;
+		border: 1px solid transparent;
 	}
 
 	nav ul li:hover,
 	nav ul li.active {
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 25px;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.6);
+		border-radius: 25px;
+		margin-bottom: 5px;
 	}
 
 	/* Collapsing nav bar */
@@ -408,38 +417,40 @@ button.back-to-top-button {
 		padding: 15px 20px;
 		color: #ffffff;
 	}
-    
+
 	nav.collapsed ul {
-	    display: none;
-	    flex-direction: column;
-	    background-color: rgba(255, 255, 255, 0.6);
-	    border-radius: 25px;
-	    position: absolute;
-	    top: 60px;
-	    left: 10px;
-	    right: 10px;
-	    text-align: center;
-	    padding: 5px 20px;
+		display: none;
+		flex-direction: column;
+		background-color: rgba(255, 255, 255, 0.9);
+		border-radius: 25px;
+		position: absolute;
+		top: 70px;
+		left: 10px;
+		right: 10px;
+		text-align: center;
+		padding: 5px 20px;
 	}
-    
+
 	nav.collapsed ul li {
-	    margin: 0;
-	    width: 100%;
-	    padding: 10px 0;
+		margin: 0;
+		width: 100%;
+		padding: 10px 0;
 	}
 
 	nav.collapsed ul li:hover,
 	nav.collapsed ul li.active {
-	background-color: rgba(255, 255, 255, 0.7);
-	border-radius: 25px;
+		background-color: rgba(255, 255, 255, 0.9);
+		border: 1px solid rgba(127, 142, 111, 0.93);
+		border-radius: 25px;
 	}
 
 	/* End collapsing nav bar */
-    
+
 	#menu-toggle:checked + .hamburger + ul {
 		display: flex;
 		align-items: center;
 	}
+
 	.grid-container {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto; /* Adjust based on your needs */
@@ -461,5 +472,3 @@ button.back-to-top-button {
 		overflow: auto; 
 	}
 }
-
-    
